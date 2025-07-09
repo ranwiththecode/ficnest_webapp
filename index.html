@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FicNest</title>
+  <style>
+    .library-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .story-card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .story-card h3 {
+      margin: 0 0 0.5rem;
+    }
+    .story-card .subtitle {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .story-card button {
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to FicNest</h1>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Fanfiction Library</h1>
+        
+        <!-- Tab Buttons -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('manual-tab')">Add Manually</button>
+            <button class="tab-button" onclick="openTab('import-tab')">Import</button>
+        </div>
+        
+        <!-- Manual Add Tab (Existing Form) -->
+        <div id="manual-tab" class="tab-content" style="display: block;">
+            <h2>Add Story Manually</h2>
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="author" placeholder="Author">
+            <input type="url" id="url" placeholder="URL">
+            <button id="add-btn">Add to Library</button>
+        </div>
+        
+        <!-- Import Tab (Placeholder for Now) -->
+        <div id="import-tab" class="tab-content" style="display: none;">
+
+    <h2>Import Stories</h2>
+    <div class="import-container">
+        <input type="url" id="import-url" placeholder="Paste AO3 link">
+        <button id="import-btn">Fetch Story</button>
+
+        <div id="import-status"></div>
+        
+        <div id="import-preview" style="display: none;">
+            <h3>Story Preview</h3>
+            <div class="preview-item"><strong>Title:</strong> <span id="preview-title"></span></div>
+            <div class="preview-item"><strong>Author:</strong> <span id="preview-author"></span></div>
+            <div class="preview-item"><strong>Fandom:</strong> <span id="preview-fandom"></span></div>
+            <div class="preview-item"><strong>Relationships:</strong> <span id="preview-ships"></span></div>
+            <div class="preview-item"><strong>Characters:</strong> <span id="preview-characters"></span></div>
+            <div class="preview-item"><strong>Words:</strong> <span id="preview-words"></span></div>
+            <div class="preview-item"><strong>Chapters:</strong> <span id="preview-chapters"></span></div>
+            <div class="preview-item"><strong>Tags:</strong> <span id="preview-tags"></span></div>
+            <button id="confirm-import">Add to Library</button>
+        </div>
+    </div>
+</div>
+        
+       <h2>Your Library</h2>
+  <div id="library" class="library-grid"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
